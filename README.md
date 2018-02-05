@@ -21,13 +21,15 @@ grok_version_tag: v2.3.0
 
 ## Dependencies
 
-* None
+* Playbook requires the following applciations to be installed: 
+  - git
+  - build-essential (gcc, g++, make)
   
 ## Example Playbook
 
     - hosts: webservers
       roles:
-        - { role: islandora.grok }
+        - islandora.grok
 
 ## License
 
