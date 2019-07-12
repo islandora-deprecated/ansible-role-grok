@@ -7,7 +7,7 @@
     cache_valid_time: 600
   with_items:
     - cmake
-    - libpng16-dev
+    - libpng-dev
     - libtiff-dev
     - liblcms2-dev
   when: ansible_os_family == "Debian"
