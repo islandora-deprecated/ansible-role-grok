@@ -2,24 +2,14 @@
 
 - name: Install Grok dependencies (apt)
   apt:
-    name: "{{ item }}"
+    name: ["cmake", "libpng-dev", "libtiff-dev", "liblcms2-dev"]
     update_cache: yes
     cache_valid_time: 600
-  with_items:
-    - cmake
-    - libpng-dev
-    - libtiff-dev
-    - liblcms2-dev
   when: ansible_os_family == "Debian"
 
 - name: Install Grok dependencies (yum)
   yum:
-    name: "{{ item }}"
-  with_items:
-    - cmake3
-    - libpng-devel
-    - libtiff-devel
-    - lcms2-devel
+    name: ["cmake3", "libpng-devel", "libtiff-devel", "lcms2-devel"]
   when: ansible_os_family == "RedHat"
 
 - name: Clone Grok
