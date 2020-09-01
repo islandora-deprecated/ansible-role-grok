@@ -1,4 +1,4 @@
-# Ansible Role: Grok [![Build Status](https://travis-ci.org/Islandora-Devops/ansible-role-grok.svg?branch=master)](https://travis-ci.org/Islandora-Devops/ansible-role-grok)
+# Ansible Role: Grok [![Build Status](https://travis-ci.org/Islandora-Devops/ansible-role-grok.svg?branch=main)](https://travis-ci.org/Islandora-Devops/ansible-role-grok)
 
 An Ansible role that installs [Grok](https://github.com/GrokImageCompression/grok) on:
 
