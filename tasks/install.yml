@@ -51,8 +51,11 @@
     creates: /usr/local/bin/opj_decompress
   register: grok_make_install
 
-- name: Move grk_decompress to opj_decompress
-  command: mv /usr/local/bin/grk_decompress /usr/local/bin/opj_decompress
+- name: Symlink grk_decompress to opj_decompress
+  file:
+    src: /usr/local/bin/grk_decompress
+    dest: /usr/local/bin/opj_decompress
+    state: link
   when: grok_make_install.changed
 
 - name: Update ldconfig
