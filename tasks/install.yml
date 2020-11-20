@@ -56,7 +56,7 @@
     src: /usr/local/bin/grk_decompress
     dest: /usr/local/bin/opj_decompress
     state: link
-  when: grok_make_install.changed
+  when: grok_make_install.changed and ansible_os_family == "Debian"
 
 - name: Update ldconfig
   command: ldconfig
