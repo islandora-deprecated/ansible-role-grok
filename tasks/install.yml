@@ -2,7 +2,7 @@
 
 - name: Install Grok dependencies (apt)
   apt:
-    name: ["cmake", "libpng-dev", "libtiff-dev", "liblcms2-dev"]
+    name: ["cmake", "libpng-dev", "libtiff-dev", "liblcms2-dev", "libwebp-dev", "libzstd-dev"]
     update_cache: yes
     cache_valid_time: 600
   when: ansible_os_family == "Debian"
